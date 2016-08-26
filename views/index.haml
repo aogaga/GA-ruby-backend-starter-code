@@ -1,0 +1,113 @@
+!!!
+%html
+  %head
+    %title WDI Instructor Code Challenge
+    %link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+    %link{href: "//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css", rel: "stylesheet", integrity: "sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1", crossorigin: "anonymous"}
+    %script(type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+    %link(rel="stylesheet"  href="/css/app.css")
+
+    %link(href="//fonts.googleapis.com/css?family=Alegreya+Sans:100|Catamaran:100|Exo+2:100|Exo:100|Josefin+Sans:100|Lato:100|Yanone+Kaffeesatz:200" rel="stylesheet")
+
+    %div(class="page-wrapper")
+      %header
+        %div(class="container")
+          %div(class="row")
+            %div(class="col-md-1")
+              %img(src="https://raw.github.com/generalassembly/ga-ruby-on-rails-for-devs/master/images/ga.png" alt="")
+            %div(class="col-md-7 col-md-offset-2")
+              %h1 WDI Instructor Code Challenge
+
+      %div(class="container")
+        %div(class="row")
+          %div(class ="col-md-10 col-md-offset-1")
+            %form{:method =>"post"}
+              %div(class="input-group custom-search-form")
+                %input{:type =>"text", :class => "form-control", :name => "qry", :id => "qry", :placeholder => "Movie title"}
+                %span(class="input-group-btn")
+                  %button{:class => "btn btn-default",  :type => "submit"}
+                    %span(class="glyphicon glyphicon-search")
+
+        %div(class="row large-top-space")
+          %div(class="col-md-4 col-md-offset-4")
+            %div(class="card" id="card")
+              %input(name="imdbID" value="" type="hidden" id="imdbID")
+              %div(class="card-image")
+                %img(class="img-responsive" id="poster" src="")
+              %div(class="card-content")
+                %span(id="title" class="card-title") Card Title
+                %button(type="button" id="show" class="btn btn-custom pull-right" aria-label="Left Align")
+                  %i(class="fa fa-heart" aria-hidden="true" )
+                  %i(class="fa fa-external-link" id="viewMovie" aria-hidden="true")
+
+              %div(class="card-action")
+                %a(href="#")
+                  %i(class="fa fa-calendar" aria-hidden="true") :
+                  %span(id="year")
+                %a(href="#" )
+                  %i(class="fa fa-star" aria-hidden="true") :
+                  %span(id="rating")
+                %a(href="#" )
+                  %i(class="fa fa-flag" aria-hidden="true") :
+                  %span(id="flag")
+                %a(href="#")
+                  %i(class="fa fa-clock-o" aria-hidden="true") :
+                  %span(id="time")
+
+
+        %div(class="movie-box" id="movie-box")
+          %div(class="row")
+            %div(class="col-md-3")
+              %img(class="img-responsive" id="detail-poster" src="")
+
+            %div(class="col-md-9")
+              %h1(id="detail-title")
+              %h4(id="detail-year")
+              %p(id="detail-plot")
+              %ul
+                %li()
+                  Director
+                  %span(id="detail-director")
+
+                %li()
+                  Writer
+                  %span(id="detail-writer")
+                %li()
+                  Actors
+                  %span(id="detail-actors")
+                %li()
+                  Awards
+                  %span(id="detail-awards")
+                %li()
+                  Country
+                  %span(id="detail-country")
+
+                %li()
+                  Genre
+                  %span(id="detail-genre")
+                %li()
+                  Language
+                  %span(id="detail-language")
+                %li()
+                  Metascore
+                  %span(id="detail-metascore")
+                %li()
+                  Rated
+                  %span(id="detail-rated")
+                %li()
+                  Released
+                  %span(id="detail-released")
+                %li()
+                  Runtime
+                  %span(id="detail-runtime")
+                %li()
+                  Type
+                  %span(id="detail-type")
+
+
+
+
+
+
+
+  %script(src="/js/app.js")
